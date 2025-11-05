@@ -1,0 +1,238 @@
+/* 🌸 style-template.css */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f8e1f4, #d183a9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tombol kembali */
+a.kembali {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: #3A345B;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+a.kembali:hover {
+  background: #2a2740;
+  transform: translateX(-3px);
+}
+
+/* Container default (form tambah/edit) */
+.container {
+  max-width: 500px;
+  width: 90%;
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Container khusus halaman daftar mahasiswa */
+.container.daftar {
+  max-width: 900px;
+  padding: 60px 50px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Judul */
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #3A345B;
+}
+
+/* Tombol umum */
+a.btn, button, .btn-hapus {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #d183a9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+a.btn:hover,
+button:hover,
+.btn-hapus:hover {
+  background: #b95a8a;
+  transform: translateY(-3px);
+}
+
+/* Tombol warna khusus */
+.btn-ungu {
+  background: #3A345B;
+}
+.btn-ungu:hover {
+  background: #2a2740;
+}
+
+/* Tabel daftar mahasiswa */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+th, td {
+  padding: 12px 15px;
+  border-bottom: 2px solid #f1c9dc;
+}
+th {
+  background-color: #d183a9;
+  color: white;
+}
+td {
+  color: #3A345B;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Input dan form */
+input[type="text"], input[type="number"] {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #f1c9dc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #d183a9;
+  box-shadow: 0 0 6px rgba(209,131,169,0.5);
+}
+
+/* Pesan sukses/error */
+p.success { color: green; font-weight: 600; }
+p.error { color: red; font-weight: 600; }
+
+/* Biar tombol edit & hapus ukurannya benar-benar sama */
+.tombol-aksi a,
+.tombol-aksi button {
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+/* Warna & efek hover */
+.tombol-aksi .btn-edit {
+  background: #d183a9;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.tombol-aksi .btn-edit:hover {
+  background: #b95a8a;
+  transform: translateY(-2px);
+}
+
+.tombol-aksi .btn-hapus {
+  background: #b22222;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.tombol-aksi .btn-hapus:hover {
+  background: #8b0000;
+  transform: translateY(-2px);
+}
+
+/* Dropdown Fakultas */
+select {
+  width: 85%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #f1c9dc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #3A345B;
+  outline: none;
+  transition: 0.3s;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #d183a9 50%), 
+                    linear-gradient(135deg, #d183a9 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1.2em), calc(100% - 15px) calc(1.2em);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+select:focus {
+  border-color: #d183a9;
+  box-shadow: 0 0 6px rgba(209,131,169,0.5);
+}
+
+/* Tombol seragam */
+.btn, button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #d183a9; /* warna pink seperti Edit */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover, button:hover {
+  background: #b95a8a;
+  transform: translateY(-3px);
+}
+
+/* ✅ Perbaikan tombol Edit & Hapus */
+table td form {
+  display: inline-block; /* pastikan tombol hapus sejajar dengan Edit */
+  margin: 0;
+  padding: 0;
+}
+
+button.hapus-btn {
+  background: #b22222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button.hapus-btn:hover {
+  background: #8b0000;
+  transform: translateY(-2px);
+}
+
